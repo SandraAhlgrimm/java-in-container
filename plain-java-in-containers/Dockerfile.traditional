@@ -1,0 +1,4 @@
+FROM openjdk:11.0.10
+COPY src/com/example/HelloWorld.java com/example/HelloWorld.java
+RUN javac com/example/HelloWorld.java
+ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "com.example.HelloWorld"]\
